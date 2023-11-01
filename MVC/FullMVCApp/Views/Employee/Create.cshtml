@@ -1,0 +1,26 @@
+@model FullMVCApp.Models.Employee
+
+<form method="POST" action="/Employee/Create">
+    <label>Enter EmployeeID</label>
+    <input asp-for="EmployeeId" placeholder="121"/>
+    <br /><Br />
+    <label>Enter EmployeeName</label>
+    <input asp-for="EmployeeName" placeholder="Vikrant"/>
+    <br /><Br />
+    <label>Enter Salary</label>
+    <input asp-for="Salary" placeholder="9854"/>
+    <br /><Br />
+    <label>Enter Department</label>
+    <select asp-for="DepartmentId" asp-items="ViewBag.Data">
+    </select>
+    <br /><Br />
+    <label>Enter Joining Date</label>
+    <input asp-for="JoinDate" placeholder="12-Dec-2021"/>
+    <br /><Br />
+    <label>Is Regular?</label>
+    <input asp-for="IsRegular"/>
+    <br /><Br />
+    <input type="submit" value="Send Data"/>
+    @ViewBag.message
+</form>
+

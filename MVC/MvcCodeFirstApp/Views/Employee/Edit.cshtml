@@ -1,0 +1,26 @@
+@model MvcCodeFirstApp.Data.Employee
+
+<h4>Edit Employee</h4>
+
+<form asp-action="Edit" method="POST" asp-controller="Employee">
+    <label>Enter Employee Name</label>
+    <br />
+    <input asp-for="EmployeeName" disable autocomplete="">
+    <br />
+    <label>Enter Department</label>
+    <br />
+    <select asp-for="DepartmentId" asp-items="ViewBag.deptData">
+        <option>Select Department</option>
+    </select>
+    @* <input asp-for="DepartmentId"> *@
+    <br />
+    <label>Enter Salary</label>
+    <br />
+    <input  asp-for="Salary">
+    <br />
+    <label>Enter JoinDate</label>
+    <br />
+    <input asp-for="JoinDate">
+    <br /><br>
+    <input type="submit" value="Update" class="btn btn-info">
+</form>

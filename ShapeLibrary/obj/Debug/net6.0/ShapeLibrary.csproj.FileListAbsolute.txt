@@ -1,0 +1,12 @@
+/home/coder/project/workspace/ShapeLibrary/bin/Debug/net6.0/ShapeLibrary.deps.json
+/home/coder/project/workspace/ShapeLibrary/bin/Debug/net6.0/ShapeLibrary.dll
+/home/coder/project/workspace/ShapeLibrary/bin/Debug/net6.0/ShapeLibrary.pdb
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.csproj.AssemblyReference.cache
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.AssemblyInfoInputs.cache
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.AssemblyInfo.cs
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.csproj.CoreCompileInputs.cache
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.dll
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/refint/ShapeLibrary.dll
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ShapeLibrary.pdb
+/home/coder/project/workspace/ShapeLibrary/obj/Debug/net6.0/ref/ShapeLibrary.dll
