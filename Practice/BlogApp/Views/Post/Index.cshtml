@@ -1,0 +1,26 @@
+@model IEnumerable<BlogApp.Models.Post>
+
+<img src="https://revenuearchitects.com/wp-content/uploads/2017/02/Blog_pic-1030x584.png" width="100px" height="100px">
+
+
+<a asp-controller="Post" asp-action="Create" class="btn btn-info">Add</a>
+<table class="table table-stripped">
+    <tr>
+        <th>@Html.DisplayNameFor(@model=>model.Title)</th>
+        <th>@Html.DisplayNameFor(@model=>model.Content)</th>
+        <th>@Html.DisplayNameFor(@model=>model.Author)</th>
+        <th>@Html.DisplayNameFor(@model=>model.PublishDate)</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Title</td>
+            <td>@i.Content</td>
+            <td>@i.Author</td>
+            <td>@i.PublishDate</td>
+            <td><a asp-controller="Post" asp-action="Delete" asp-route-id="@i.Id">Delete</a></td>
+            <td><a asp-asp-controller="Post" asp-action="Edit" asp-route-id="@i.Id">Edit</a></td>
+        </tr>
+    }
+</table>

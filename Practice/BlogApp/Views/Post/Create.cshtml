@@ -1,0 +1,23 @@
+@model BlogApp.Models.Post
+
+<form method="POST" asp-controller="Post" asp-action="Create">
+    <label>Title</label>
+    <br>
+    <input asp-for="Title">
+    <br>
+    <label>Content</label>
+    <br>
+    <input asp-for="Content">
+    <br>
+    <label>Author</label>
+    <br>
+    <input asp-for="Author">
+    <br>
+    <label>PublishDate</label>
+    <br>
+    <input asp-for="PublishDate">
+    <br>
+    <input type="Submit" value="ADD POST" class="btn btn-info">
+    @ViewBag.Message
+    <br>
+</form>
