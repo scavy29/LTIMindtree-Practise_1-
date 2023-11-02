@@ -27,12 +27,15 @@ namespace BlogApp.Controllers
         [HttpPost]
         public IActionResult Create(Post p)
         {
-            db.Posts.Add(p);
-            db.SaveChanges();
-            ViewBag.Message="Post Added";
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                db.Posts.Add(p);
+                db.SaveChanges();
+                ViewBag.Message="Post Added";
+                return RedirectToAction("Index");
+            }
+            return View();
         }
-
 
         public IActionResult Delete(int id)
         {
@@ -66,6 +69,11 @@ namespace BlogApp.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Details(int id)
+        {
+            var listofpost=db.Posts.Find(id);
+            return View(listofpost);
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

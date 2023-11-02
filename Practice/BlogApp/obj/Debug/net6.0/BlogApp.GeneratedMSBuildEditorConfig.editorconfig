@@ -27,8 +27,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/coder/project/workspace/Practice/BlogApp/Views/Post/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9EZWxldGUuY3NodG1s
+[/home/coder/project/workspace/Practice/BlogApp/Views/Post/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/coder/project/workspace/Practice/BlogApp/Views/Post/Edit.cshtml]

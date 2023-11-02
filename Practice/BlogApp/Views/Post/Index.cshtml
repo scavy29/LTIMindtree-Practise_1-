@@ -20,7 +20,8 @@
             <td>@i.Author</td>
             <td>@i.PublishDate</td>
             <td><a asp-controller="Post" asp-action="Delete" asp-route-id="@i.Id">Delete</a></td>
-            <td><a asp-asp-controller="Post" asp-action="Edit" asp-route-id="@i.Id">Edit</a></td>
+            <td><a asp-controller="Post" asp-action="Edit" asp-route-id="@i.Id">Edit</a></td>
+            <td><a asp-controller="Post" asp-action="Details" asp-route-id="@i.Id">Details</a></td>
         </tr>
     }
 </table>

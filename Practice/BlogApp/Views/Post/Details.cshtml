@@ -1,0 +1,23 @@
+@model BlogApp.Models.Post
+
+<table class="table table-stripped">
+            <tr>
+            <td>@Html.DisplayNameFor(model=>model.Title)</td>
+            <td>@Model.Title</td>
+            </tr>
+           
+            <tr>
+            <td>@Html.DisplayNameFor(model=>model.Content)</td>
+            <td>@Model.Content</td>
+            </tr>
+            
+            <tr>
+            <td>@Html.DisplayNameFor(model=>model.Author)</td>
+            <td>@Model.Author</td>
+            </tr>
+
+            <tr>
+            <td>@Html.DisplayNameFor(model=>model.PublishDate)</td>
+            <td>@Model.PublishDate</td>
+            </tr>
+</table>
