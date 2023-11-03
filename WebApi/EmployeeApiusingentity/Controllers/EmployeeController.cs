@@ -34,13 +34,17 @@ namespace EmployeeApiusingentity.Controllers
 
         [HttpPost]
         [Route ("{Id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id,Employee e)
         {
             var delist=db.Designations.Find(id);
             if(delist!=null)
             {
-                db.Remove()
+                db.Remove(e);
+                db.SaveChanges();
+                return Ok(e);
             }
+            else
+                return NotFound();
         }
     }
 }
