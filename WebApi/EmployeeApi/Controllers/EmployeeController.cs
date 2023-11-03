@@ -36,7 +36,7 @@ namespace EmployeeApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return (employeelist);
+            return Ok(employeelist);
         }
 
         // public Employee Get(int id)
