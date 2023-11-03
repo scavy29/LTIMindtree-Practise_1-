@@ -46,6 +46,13 @@ namespace EmployeeApi.Controllers
             employeelist.Add(emp);
         }
 
-        public void Post()
+        [HttpPost]
+        [Route("{id}")]
+        public void Delete(int id)
+        {
+            Employee emp=this.Get(id);
+            employeelist.FirstOrDefault(e=>e.EmployeeId==id);
+            employeelist.Remove(emp);
+        }
     }
 }
