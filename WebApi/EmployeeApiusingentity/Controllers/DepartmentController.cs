@@ -28,9 +28,11 @@ namespace EmployeeApiusingentity.Controllers
         [HttpPost]
         public IActionResult Post(Department d)
         {
-            db.Departments.Add(d);
-            db.SaveChanges();
-            return Ok(d);
-        }   
+                db.Add(d);
+                db.SaveChanges();
+                return Ok(d);
+            
+        }
     }
 }
+

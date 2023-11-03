@@ -9,5 +9,6 @@ namespace EmployeeApiusingentity.Models
     {
         public int DepartmentId{get;set;}
         public string? DeptName{get;set;}
+        public ICollection<Employee>? Employees{get;set;}
     }
 }
