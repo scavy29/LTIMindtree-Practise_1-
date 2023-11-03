@@ -12,7 +12,7 @@ namespace EmployeeApiusingentity.Models
         public int DesignationId{get;set;}
         public int DepartmentId{get;set;}
         public double Salary{get;set;}
-        public Department Department{get;set;}
-        public Designation Designation{get;set;}
+        public Department? Department{get;set;}
+        public Designation? Designation{get;set;}
     }
 }
