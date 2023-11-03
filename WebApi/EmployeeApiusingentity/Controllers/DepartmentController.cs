@@ -44,6 +44,20 @@ namespace EmployeeApiusingentity.Controllers
                 return Ok(d);
         }
 
+        [HttpPost]
+        [Route ("{Id}")]
+        public IActionResult Delete(int id)
+        {
+            var deptlist=db.Departments.Find(id);
+            if(deptlist!=null)
+            {
+                db.Remove(deptlist);
+                db.SaveChanges();
+                return Ok(deptlist);
+            }
+            else
+                return NotFound();
+        }
     }
 }
 

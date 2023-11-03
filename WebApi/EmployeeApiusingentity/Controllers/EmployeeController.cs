@@ -31,5 +31,16 @@ namespace EmployeeApiusingentity.Controllers
             // return Ok(emp);
             return CreatedAtAction("Get",new{id=emp.EmployeeId},emp);
         } 
+
+        [HttpPost]
+        [Route ("{Id}")]
+        public IActionResult Delete(int id)
+        {
+            var delist=db.Designations.Find(id);
+            if(delist!=null)
+            {
+                db.Remove()
+            }
+        }
     }
 }

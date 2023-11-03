@@ -20,8 +20,30 @@ namespace EmployeeApiusingentity.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var designationlist=db.Designations;
-            return Ok(designationlist);
+            return Ok(db.Designations);
+        }
+
+        [HttpPost]
+        public IActionResult Post(Designation d)
+        {
+            db.Designations.Add(d);
+            db.SaveChanges();
+            return Ok(d);
+        }
+
+        [HttpPost]
+        [Route ("{Id}")]
+        public IActionResult Delete(int id,Designation d)
+        {
+            var designlist=db.Designations.Find(id);
+            if(designlist!=null)
+            {
+                db.Remove(d);
+                db.SaveChanges();
+                return Ok(d);
+            }
+            else
+                return NotFound();
         }
     }
 }
