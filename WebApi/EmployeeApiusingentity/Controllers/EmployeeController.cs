@@ -12,7 +12,7 @@ namespace EmployeeApiusingentity.Controllers
     public class EmployeeController : ControllerBase
     {
         private AppDbContext db;
-        public EmployeeController(AppContext context)
+        public EmployeeController(AppDbContext context)
         {
             this.db=context;
         }   

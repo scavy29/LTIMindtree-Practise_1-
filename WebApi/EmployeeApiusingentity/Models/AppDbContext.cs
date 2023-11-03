@@ -2,16 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmployeeApiusingentity.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeApiusingentity.Models
 {
-    public class AppDbContext:DbContext
+    public partial class AppDbContext:DbContext
     {
-        public AppContext(DbContextOptions<AppDbContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
-            
+
         }   
-        public virtual DbSet<Employee>Employees{get;set;}     
-        public virtual DbSet<Department>Departments{get;set;}     
+
+        public DbSet<Employee>Employees{get;set;}     
+        public DbSet<Department>Departments{get;set;}     
+        public DbSet<Designation>Designation{get;set;}     
     }
 }
