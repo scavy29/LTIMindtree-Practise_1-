@@ -16,6 +16,6 @@ namespace EmployeeApiusingentity.Models
 
         public DbSet<Employee>Employees{get;set;}     
         public DbSet<Department>Departments{get;set;}     
-        public DbSet<Designation>Designation{get;set;}     
+        public DbSet<Designation>Designations{get;set;}     
     }
 }
