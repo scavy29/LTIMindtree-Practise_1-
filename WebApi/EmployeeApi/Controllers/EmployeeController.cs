@@ -26,11 +26,13 @@ namespace EmployeeApi.Controllers
         };
     
         //To Iterate the Emp List & to get all details as well(***)
+        [HttpGet]
         public IEnumerable<Employee> Get()
         {
             return (employeelist);
         }
 
+        [HttpGet]
         [Route("{id}")]
         public Employee Get(int id)
         {
@@ -38,10 +40,10 @@ namespace EmployeeApi.Controllers
             return emp;
         }
 
+        [HttpPost]
         public void Post(Employee emp)
         {
             employeelist.Add(emp);
-            return
         }
     }
 }
