@@ -63,7 +63,15 @@ namespace EmployeeApiusingentity.Controllers
         [Route ("{id}")]
         public IActionResult Put(int id,Department d)
         {
-            
+            var dlist=db.Departments.Find(id);
+            if(dlist!=null)
+            {
+                db.Update(d);
+                db.SaveChanges();
+                return Ok(d);
+            }
+            else
+                return NotFound();
         }
     }
 }
