@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EmployeeApi.Models;
+using System.Web.Http;
+
 
 namespace EmployeeApi.Controllers
 {
@@ -37,7 +39,10 @@ namespace EmployeeApi.Controllers
         public Employee Get(int id)
         {
             var emp = employeelist.Find(e=>e.EmployeeId==id);
-            return emp;
+            if(emp!=null)
+                return Ok(emp);
+            else
+                return NotFound();
         }
 
         [HttpPost]
@@ -53,6 +58,15 @@ namespace EmployeeApi.Controllers
             Employee emp=this.Get(id);
             employeelist.FirstOrDefault(e=>e.EmployeeId==id);
             employeelist.Remove(emp);
+        }
+
+        [HttpPost]
+        [Route("{id}")]
+        public void Put(int id)
+        {
+            Employee emp=this.Get(id);
+            employeelist.FirstOrDefault(e=>e.EmployeeId==id);
+            employeelist.Add(emp);
         }
     }
 }
