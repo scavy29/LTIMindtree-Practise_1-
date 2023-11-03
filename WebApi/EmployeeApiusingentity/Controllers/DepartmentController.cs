@@ -18,6 +18,19 @@ namespace EmployeeApiusingentity.Controllers
             this.db=context;
         }   
         
-        public IActionResult 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var Departmentlist=db.Departments;
+            return Ok(Departmentlist);
+        }
+
+        [HttpPost]
+        public IActionResult Post(Department d)
+        {
+            db.Departments.Add(d);
+            db.SaveChanges();
+            return Ok(d);
+        }   
     }
 }
