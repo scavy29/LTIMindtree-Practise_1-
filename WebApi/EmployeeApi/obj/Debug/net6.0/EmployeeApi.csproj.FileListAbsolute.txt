@@ -1,0 +1,7 @@
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.csproj.AssemblyReference.cache
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.AssemblyInfoInputs.cache
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.AssemblyInfo.cs
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.csproj.CoreCompileInputs.cache
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.MvcApplicationPartsAssemblyInfo.cs
+/home/coder/project/workspace/WebApi/EmployeeApi/obj/Debug/net6.0/EmployeeApi.MvcApplicationPartsAssemblyInfo.cache
