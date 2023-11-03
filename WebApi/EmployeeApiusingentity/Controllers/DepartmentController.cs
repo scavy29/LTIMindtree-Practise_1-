@@ -26,7 +26,7 @@ namespace EmployeeApiusingentity.Controllers
         }
 
         [HttpGet]
-        [Route("{Id}")]
+        [Route("{id}")]
         public IActionResult Get(int id)
         {
             var d1=db.Departments.FirstOrDefault(d=>d.DepartmentId==id);
@@ -44,8 +44,8 @@ namespace EmployeeApiusingentity.Controllers
                 return Ok(d);
         }
 
-        [HttpPost]
-        [Route ("{Id}")]
+        [HttpDelete]
+        [Route ("{id}")]
         public IActionResult Delete(int id)
         {
             var deptlist=db.Departments.Find(id);
@@ -57,6 +57,13 @@ namespace EmployeeApiusingentity.Controllers
             }
             else
                 return NotFound();
+        }
+
+        [HttpPut]
+        [Route ("{id}")]
+        public IActionResult Put(int id,Department d)
+        {
+            
         }
     }
 }

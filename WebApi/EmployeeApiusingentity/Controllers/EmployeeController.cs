@@ -42,16 +42,31 @@ namespace EmployeeApiusingentity.Controllers
             return CreatedAtAction("Get",new{id=emp.EmployeeId},emp);
         } 
 
-        [HttpDelete]
         [Route ("{Id}")]
-        public IActionResult Delete(int id,Employee e)
+        [HttpDelete]
+        public IActionResult Delete(int Id)
         {
-            var delist=db.Employees.Find(id);
+            var delist=db.Employees.Find(Id);
             if(delist!=null)
             {
-                db.Remove(e);
+                db.Remove(delist);
                 db.SaveChanges();
-                return Ok(e);
+                return Ok();
+            }
+            else
+                return NotFound();
+        }
+
+        [Route ("{Id}")]
+        [HttpPut]
+        public IActionResult Put(int id,Employee emp)
+        {
+            var elist=db.Employees.Find(id);
+            if(elist!=null)
+            {
+                db.Update(emp);
+                db.SaveChanges();
+                return Ok(emp);
             }
             else
                 return NotFound();
