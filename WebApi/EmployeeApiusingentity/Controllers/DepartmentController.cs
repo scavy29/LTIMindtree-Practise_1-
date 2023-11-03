@@ -25,14 +25,26 @@ namespace EmployeeApiusingentity.Controllers
             return Ok(Departmentlist);
         }
 
+        [HttpGet]
+        [Route("{Id}")]
+        public IActionResult Get(int id)
+        {
+            var d1=db.Departments.FirstOrDefault(d=>d.DepartmentId==id);
+            if(d1!=null)
+                return Ok(d1);
+            else
+                return NotFound();
+        }
+
         [HttpPost]
         public IActionResult Post(Department d)
         {
                 db.Add(d);
                 db.SaveChanges();
                 return Ok(d);
-            
         }
+
     }
 }
+
 
