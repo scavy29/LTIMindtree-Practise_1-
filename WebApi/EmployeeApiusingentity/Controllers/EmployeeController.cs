@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EmployeeApiusingentity.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeApiusingentity.Controllers
 {
@@ -20,7 +21,16 @@ namespace EmployeeApiusingentity.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(db.Employees);
+            //Normal .Include gives an error since it runs in a loop and serialization error takes place
+            var employeelist=db.Employees.Include("Department").Include("Designation").
+                                                        Select(e=> new{
+                                                            e.EmployeeId,
+                                                            e.EmployeeName,
+                                                            DeptName=e.Department.DeptName,
+                                                            DesignationName=e.Designation.DesignationName,
+                                                            e.Salary,
+                                                        }).ToList();
+            return Ok(employeelist);
         }
 
         [HttpPost]
@@ -32,11 +42,11 @@ namespace EmployeeApiusingentity.Controllers
             return CreatedAtAction("Get",new{id=emp.EmployeeId},emp);
         } 
 
-        [HttpPost]
+        [HttpDelete]
         [Route ("{Id}")]
         public IActionResult Delete(int id,Employee e)
         {
-            var delist=db.Designations.Find(id);
+            var delist=db.Employees.Find(id);
             if(delist!=null)
             {
                 db.Remove(e);
