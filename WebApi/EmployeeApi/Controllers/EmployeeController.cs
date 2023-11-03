@@ -17,7 +17,7 @@ namespace EmployeeApi.Controllers
     public class EmployeeController : ControllerBase
     {
         //Declaring a List to store list of employees
-        private List<Employee> employeelist=new List<Employee>{
+        private static List<Employee> employeelist=new List<Employee>{
             new Employee{EmployeeId=101,EmployeeName="Vikrant",Salary=20400},
             new Employee{EmployeeId=121,EmployeeName="Sushil",Salary=50900},
             new Employee{EmployeeId=131,EmployeeName="Harshal",Salary=45330},
@@ -45,5 +45,7 @@ namespace EmployeeApi.Controllers
         {
             employeelist.Add(emp);
         }
+
+        public void Post()
     }
 }
