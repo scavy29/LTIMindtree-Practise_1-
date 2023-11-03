@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EmployeeApi.Models;
-using System.Web.Http;
+// using System.Web.Http;
 
 
 namespace EmployeeApi.Controllers
@@ -28,15 +28,28 @@ namespace EmployeeApi.Controllers
         };
     
         //To Iterate the Emp List & to get all details as well(***)
+        // public IEnumerable<Employee> Get()
+        // {
+        //     return (employeelist);
+        // }
+
         [HttpGet]
-        public IEnumerable<Employee> Get()
+        public IActionResult Get()
         {
             return (employeelist);
         }
 
+        // public Employee Get(int id)
+        // {
+        //     var emp = employeelist.Find(e=>e.EmployeeId==id);
+        //     if(emp!=null)
+        //         return Ok(emp);
+        //     else
+        //         return NotFound();
+        // }
         [HttpGet]
         [Route("{id}")]
-        public Employee Get(int id)
+        public IActionResult Get(int id)
         {
             var emp = employeelist.Find(e=>e.EmployeeId==id);
             if(emp!=null)
@@ -45,28 +58,54 @@ namespace EmployeeApi.Controllers
                 return NotFound();
         }
 
+        // public void Post(Employee emp)
+        // {
+        //     employeelist.Add(emp);
+        // }
         [HttpPost]
-        public void Post(Employee emp)
+        public IActionResult Post(Employee emp)
         {
             employeelist.Add(emp);
+            return Ok(emp);
         }
 
+        // public IActionResult Delete(int id)
+        // {
+        //     Employee emp=this.Get(id);
+        //     employeelist.FirstOrDefault(e=>e.EmployeeId==id);
+        //     employeelist.Remove(emp);
+        // }
         [HttpPost]
         [Route("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
-            Employee emp=this.Get(id);
-            employeelist.FirstOrDefault(e=>e.EmployeeId==id);
-            employeelist.Remove(emp);
+            var emp=employeelist.FirstOrDefault(e=>e.EmployeeId==id);
+            if(emp!=null)
+            {
+                employeelist.Remove(emp);
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("{id}")]
-        public void Put(int id)
+        public IActionResult Put(int id,Employee e)
         {
-            Employee emp=this.Get(id);
-            employeelist.FirstOrDefault(e=>e.EmployeeId==id);
-            employeelist.Add(emp);
+            var emp=employeelist.FirstOrDefault(e=>e.EmployeeId==id);
+            if(emp!=null)
+            {
+                emp.EmployeeName=e.EmployeeName;
+                emp.Salary=e.Salary;
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
