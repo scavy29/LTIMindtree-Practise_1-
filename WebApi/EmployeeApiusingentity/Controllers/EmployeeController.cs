@@ -71,5 +71,25 @@ namespace EmployeeApiusingentity.Controllers
             else
                 return NotFound();
         }
+
+        [HttpGet ("admin/{uname}/{password}")]
+        // [Route ("{uname}/{password}")]
+        public string ValidateCreds(string uname,string password)
+        {
+            if(uname==password)
+                return "Valid Credentials";
+            else
+                return "Invalid";
+        }
+
+        [HttpGet ("{one}/{two}")]
+        public string M(string one,string two)
+        {
+            if(one==two)
+                return "Valid Credentials";
+            else
+                return "Invalid";
+        }
+
     }
 }

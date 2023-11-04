@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/obj/Debug/net6.0/project.razor.json",
-  "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/MvcCodeFirstApp.csproj",
+  "SerializedFilePath": "/home/coder/project/workspace/WebApi/EmployeeApiusingentity/obj/Debug/net6.0/project.razor.json",
+  "FilePath": "/home/coder/project/workspace/WebApi/EmployeeApiusingentity/EmployeeApiusingentity.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18371,58 +18371,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "MvcCodeFirstApp",
-  "Documents": [
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Employee/Edit.cshtml",
-      "TargetPath": "Views\\Employee\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Employee/Index.cshtml",
-      "TargetPath": "Views\\Employee\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Employee/Create.cshtml",
-      "TargetPath": "Views\\Employee\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Shared/Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MvcCodeFirstApp/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "RootNamespace": "EmployeeApiusingentity",
+  "Documents": [],
   "SerializationFormat": "0.3"
 }
