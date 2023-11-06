@@ -20,7 +20,7 @@ namespace EMSApi.Models
         }
         public void EditDepartment(Department dept)
         {
-            Department department=context.Departments.Find(dept.Id);
+            Department department=context.Departments.Find(dept.DepartmentId);
             department.DeptName=dept.DeptName;
             context.SaveChanges();
         }

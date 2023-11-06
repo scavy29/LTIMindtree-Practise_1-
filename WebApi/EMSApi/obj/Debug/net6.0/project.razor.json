@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "/home/coder/project/workspace/MVC/MyMvcApp/obj/Debug/net6.0/project.razor.json",
-  "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/MyMvcApp.csproj",
+  "SerializedFilePath": "/home/coder/project/workspace/WebApi/EMSApi/obj/Debug/net6.0/project.razor.json",
+  "FilePath": "/home/coder/project/workspace/WebApi/EMSApi/EMSApi.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18371,58 +18371,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "MyMvcApp",
-  "Documents": [
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Home/myprojects.cshtml",
-      "TargetPath": "Views\\Home\\myprojects.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Home/ContactUs.cshtml",
-      "TargetPath": "Views\\Home\\ContactUs.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Home/Create.cshtml",
-      "TargetPath": "Views\\Home\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/coder/project/workspace/MVC/MyMvcApp/Views/Shared/Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "RootNamespace": "EMSApi",
+  "Documents": [],
   "SerializationFormat": "0.3"
 }
