@@ -28,12 +28,12 @@ namespace EMSApi.Controllers
 
         [HttpPost]
         [Route("Create")]
-        public IActionResult PostDept(Department dept)
+        public IActionResult PostDept(Department department)
         {
             if(ModelState.IsValid)
             {
-                repo.AddDepartment(dept);
-                return Created("Record Added",dept);
+                repo.AddDepartment(department);
+                return Created("Record Added",department);
             }
             return BadRequest();
         }
@@ -44,6 +44,22 @@ namespace EMSApi.Controllers
         {
             var data=repo.FindDept(id);
             return Ok(data);
+        }
+
+        [HttpPut]
+        [Route("EditDept/{id}")]
+        public IActionResult PutDept(int id,Department department)
+        {
+            repo.EditDepartment(department);
+            return Ok();   
+        }
+
+        [HttpDelete]
+        [Route("DeleteDept/{id}")]
+        public IActionResult DeleteDept(int id)
+        {
+            repo.DeleteDepartment(id);
+            return Ok();
         }
     }
 }
