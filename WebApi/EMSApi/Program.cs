@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<NewEmpDbContext>(options=>{
     options.UseSqlServer(builder.Configuration.GetConnectionString("conStr"));
 });
+builder.Services.AddTransient<IDept,DepartmentRepository>();
 
 var app = builder.Build();
 
