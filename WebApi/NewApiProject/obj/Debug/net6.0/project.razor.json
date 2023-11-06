@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "/home/coder/project/workspace/WebApi/EmployeeApiusingentity/obj/Debug/net6.0/project.razor.json",
-  "FilePath": "/home/coder/project/workspace/WebApi/EmployeeApiusingentity/EmployeeApiusingentity.csproj",
+  "SerializedFilePath": "/home/coder/project/workspace/WebApi/NewApiProject/obj/Debug/net6.0/project.razor.json",
+  "FilePath": "/home/coder/project/workspace/WebApi/NewApiProject/NewApiProject.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18371,7 +18371,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "EmployeeApiusingentity",
+  "RootNamespace": "NewApiProject",
   "Documents": [],
   "SerializationFormat": "0.3"
 }
