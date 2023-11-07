@@ -14,7 +14,7 @@ builder.Services.AddAuthentication(x=>
     x.DefaultChallengeScheme=JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(token=>
 {
-    var key=Encoding.UTF8.GetBytes(con["JWT:Key"]);
+    var key= System.Text.Encoding.UTF8.GetBytes(con["JWT:Key"]);
     token.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer=false,

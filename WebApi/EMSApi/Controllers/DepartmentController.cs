@@ -61,5 +61,25 @@ namespace EMSApi.Controllers
             repo.DeleteDepartment(id);
             return Ok();
         }
+
+        //post
+        // https://localhost:8080/DepartmentController/auth
+        [HttpPost]
+        [Route("auth")]
+        public string AuthenticateUser(UserData data)
+        {
+            string token="";
+            if(data.Username=="username" && data.Password=="password")
+            {
+                token = TokenGenerator(data);
+            }
+            return "lorem ipsum";
+        }
+
+        public string TokenGenerator(UserData data)
+        {
+            var securitykey=new SymmetricSecurityKey()
+            return "token";
+        }
     }
 }
