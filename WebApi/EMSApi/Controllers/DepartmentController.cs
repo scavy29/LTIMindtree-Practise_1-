@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using EMSApi.Models;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace EMSApi.Controllers
 {
@@ -12,10 +14,14 @@ namespace EMSApi.Controllers
     [Route("api/[controller]")]
     public class DepartmentController : ControllerBase
     {
+        private IConfiguration _con;
+
+        // public DepartmentController(ILogger<DepartmentController> logger,)
         IDept repo;
-        public DepartmentController(IDept _repo)
+        public DepartmentController(IDept _repo,IConfiguration con)
         {
             this.repo=_repo;
+            _con=con;
         }   
 
         [HttpGet]
@@ -78,7 +84,8 @@ namespace EMSApi.Controllers
 
         public string TokenGenerator(UserData data)
         {
-            var securitykey=new SymmetricSecurityKey()
+            var securitykey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_con["JWT:Key"]));
+            var credentials=new SigningCredentials(securitykey,SecurityAlgorithms.HmacSha256);
             return "token";
         }
     }
