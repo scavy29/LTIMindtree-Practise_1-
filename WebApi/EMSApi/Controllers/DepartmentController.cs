@@ -70,8 +70,8 @@ namespace EMSApi.Controllers
             return Ok();
         }
 
-        //post
-        // https://localhost:8080/DepartmentController/auth
+        //POST
+        // http://0.0.0.0:8080/DepartmentController/auth
         [HttpPost]
         [Route("auth")]
         public string AuthenticateUser(UserData data)
@@ -81,7 +81,12 @@ namespace EMSApi.Controllers
             {
                 token = TokenGenerator(data);
             }
-            return "lorem ipsum";
+            return token;
+        }
+
+        public string SensitiveResource()
+        {
+            return "Resource";
         }
 
         public string TokenGenerator(UserData data)
