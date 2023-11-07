@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using EMSApi.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace EMSApi.Controllers
 {
@@ -86,7 +88,23 @@ namespace EMSApi.Controllers
         {
             var securitykey=new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_con["JWT:Key"]));
             var credentials=new SigningCredentials(securitykey,SecurityAlgorithms.HmacSha256);
-            return "token";
+
+            var claims=new[]
+            {
+                new Claim(ClaimTypes.Name,data.Username),
+                new Claim(ClaimTypes.Role,"hero"),
+            };
+
+            var token=new JwtSecurityToken(_con["JWT:Issuer"],
+            _con["JWT:Audience"],
+            claims,
+            expires:DateTime.Now.AddMinutes(2),
+            signingCredentials:credentials
+            );
+
+            string finalToken = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return finalToken;
         }
     }
 }

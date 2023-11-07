@@ -80,3 +80,4 @@
 /home/coder/project/workspace/WebApi/EMSApi/obj/Debug/net6.0/EMSApi.pdb
 /home/coder/project/workspace/WebApi/EMSApi/obj/Debug/net6.0/EMSApi.genruntimeconfig.cache
 /home/coder/project/workspace/WebApi/EMSApi/obj/Debug/net6.0/ref/EMSApi.dll
+/home/coder/project/workspace/WebApi/EMSApi/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
