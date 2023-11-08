@@ -7,10 +7,11 @@ namespace DemoSolutions{
         {
             Console.WriteLine("Hello!!! World");
         }
-    }
 
     public int Demo()
     {
         return 100;
+    }
+    
     }
 }

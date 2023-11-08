@@ -96,3 +96,9 @@
 /home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/obj/Debug/net6.0/DemoSolutions.Test.pdb
 /home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/obj/Debug/net6.0/DemoSolutions.Test.genruntimeconfig.cache
 /home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/obj/Debug/net6.0/ref/DemoSolutions.Test.dll
+/home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/bin/Debug/net6.0/CoverletSourceRootsMapping
+/home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/bin/Debug/net6.0/DemoSolutions.App.deps.json
+/home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/bin/Debug/net6.0/DemoSolutions.App.runtimeconfig.json
+/home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/bin/Debug/net6.0/DemoSolutions.App
+/home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/bin/Debug/net6.0/DemoSolutions.App.dll
+/home/coder/project/workspace/DemoSolutions/DemoSolutions.Test/bin/Debug/net6.0/DemoSolutions.App.pdb
