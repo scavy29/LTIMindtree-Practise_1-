@@ -1101,6 +1101,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "DemoSolutions.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DemoSolutions.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DemoSolutions.App.dll": {}
+        }
       }
     }
   },
@@ -4322,10 +4332,16 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "DemoSolutions.App/1.0.0": {
+      "type": "project",
+      "path": "../DemoSolutions.App/DemoSolutions.App.csproj",
+      "msbuildProject": "../DemoSolutions.App/DemoSolutions.App.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DemoSolutions.App >= 1.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "NUnit >= 3.13.3",
@@ -4358,7 +4374,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/coder/project/workspace/DemoSolutions/DemoSolutions.App/DemoSolutions.App.csproj": {
+              "projectPath": "/home/coder/project/workspace/DemoSolutions/DemoSolutions.App/DemoSolutions.App.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

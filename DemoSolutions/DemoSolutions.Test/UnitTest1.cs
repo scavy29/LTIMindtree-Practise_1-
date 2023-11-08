@@ -1,58 +1,107 @@
-using DemoSolutions;
-namespace DemoSolutions.WebApi.Controllers;
-namespace DemoSolutions.Test;
+using Microsoft.AspNetCore.Mvc;
+using DemoSolution;
+using Microsoft.Extensions.Logging;
+using DemoSolution.WebApi.Controllers;
 
-public class Tests
+
+namespace DemoSolution.WebApi.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class WeatherForecastController : ControllerBase
 {
-    Program program=null;
-    WeatherForecastController controllerforecast=null;
-    [SetUp]
-    public void Setup()
+    private static readonly string[] Summaries = new[]
     {
-        program=new Program();
-        WeatherForecastController = new WeatherForecastController();
+        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+    };
+
+    private readonly ILogger<WeatherForecastController> _logger;
+
+    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    {
+        _logger = logger;
+    }
+    [HttpPost]
+    public int PostData()
+    {
+        return 0;
+    }
+    
+    [HttpPut]
+    public string DemoTest(IDisposable dispose)
+    {
+        return "disposed";
     }
 
-    [Test]
-    public void Test1()
+    [HttpGet(Name = "GetWeatherForecast")]
+    public IEnumerable<WeatherForecast> Get()
     {
-        Program prog=new Program();
-        var value=prog.Demo();
-        // Assert.AreEqual(value,100);
-        Assert.That(value,Is.EqualTo(100));
-    }
-
-    // [Test]
-    // public void Test2()
-    // {
-    //     // Program prog=new Program();
-    //     var value=Program.IsOk();
-    //     Assert.IsTrue(value);
-    // }
-
-    [Test]
-    public void Test3()
-    {
-        Assert.Throws<DivideByZeroException>(()=>{
-            program.ThrowDivideByZeroExceptionMethod();
-        });
+        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        {
+            Date = DateTime.Now.AddDays(index),
+            TemperatureC = Random.Shared.Next(-20, 55),
+            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+        })
+        .ToArray();
     }
 
 
-    [Test]
-    public void Test4()
+  class Dispossible : IDisposable
     {
-        StringAssert.Contains("Democ",program.GetMyName("Democ"));
+        public void Dispose()
+        {
+            //throw new NotImplementedException();
+        }
     }
-
-    [Test]
-    public void Test5()
+    public class MockObject : ILogger<WeatherForecastController>
     {
-        Program p=new Program();
-        var value=p.POSNEG();
-        Assert.AreEqual(value,-1);
-    }
+        public IDisposable BeginScope<TState>(TState state)
+        {
+            return new Dispossible();
+            //throw new NotImplementedException();
+        }
 
+        public bool IsEnabled(LogLevel logLevel)
+        {
+            return false;
+            //throw new NotImplementedException();
+        }
+
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
+        {
+           // throw new NotImplementedException();
+        }
+    }
+    
+    // dotnet add package Microsoft.Extensions.Logging
 }
 
 
+/*
+ class Dispossible : IDisposable
+    {
+        public void Dispose()
+        {
+            //throw new NotImplementedException();
+        }
+    }
+    public class MockObject : ILogger<WeatherForecastController>
+    {
+        public IDisposable BeginScope<TState>(TState state)
+        {
+            return new Dispossible();
+            //throw new NotImplementedException();
+        }
+
+        public bool IsEnabled(LogLevel logLevel)
+        {
+            return false;
+            //throw new NotImplementedException();
+        }
+
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
+        {
+           // throw new NotImplementedException();
+        }
+    }
+*/ 
