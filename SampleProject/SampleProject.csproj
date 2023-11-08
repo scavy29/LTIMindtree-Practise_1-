@@ -3,7 +3,9 @@
 <PropertyGroup>
 <TargetFramework>net6.0</TargetFramework>
 <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+<OutputPath>bin\</OutputPath>
 <OutputType>Exe</OutputType>
+<AssemblyName>WordlyHello</AssemblyName>
 </PropertyGroup>
 
 <ItemGroup>
@@ -11,8 +13,14 @@
 </ItemGroup>
 
 <Target Name="Build">
-<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')"/>
-<Csc Sources="@(Compile)"></Csc>
+<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')"/></MakeDir>
+<Csc Sources="@(Compile)" OutputAssembly="$(AssemblyName).exe"></Csc>
+</Target>
+
+<Target Name="Clean">
+<Delete Files="Program.cs"/>
+
+<Target Name="Rebuild" DependsonTarget="Build;Clean">
 </Target>
 
 </Project>
