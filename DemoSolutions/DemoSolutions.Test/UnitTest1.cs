@@ -1,107 +1,75 @@
-using Microsoft.AspNetCore.Mvc;
-using DemoSolution;
-using Microsoft.Extensions.Logging;
-using DemoSolution.WebApi.Controllers;
+using DemoSolutions;
+namespace DemoSolutions.WebApi.Controllers;
+namespace DemoSolutions.Test;
 
-
-namespace DemoSolution.WebApi.Controllers;
-
-[ApiController]
-[Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class Tests
 {
-    private static readonly string[] Summaries = new[]
+    Program program=null;
+    WeatherForecastController controllerforecast=null;
+    [SetUp]
+    public void Setup()
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
-    }
-    [HttpPost]
-    public int PostData()
-    {
-        return 0;
-    }
-    
-    [HttpPut]
-    public string DemoTest(IDisposable dispose)
-    {
-        return "disposed";
+        program=new Program();
+        controllerforecast = new WeatherForecastController(new MockObject());
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [Test]
+    public void Test1()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        Program prog=new Program();
+        var value=prog.Demo();
+        // Assert.AreEqual(value,100);
+        Assert.That(value,Is.EqualTo(100));
+    }
+
+    // [Test]
+    // public void Test2()
+    // {
+    //     // Program prog=new Program();
+    //     var value=Program.IsOk();
+    //     Assert.IsTrue(value);
+    // }
+
+    [Test]
+    public void Test3()
+    {
+        Assert.Throws<DivideByZeroException>(()=>{
+            program.ThrowDivideByZeroExceptionMethod();
+        });
     }
 
 
-  class Dispossible : IDisposable
+    [Test]
+    public void Test4()
     {
-        public void Dispose()
-        {
-            //throw new NotImplementedException();
-        }
+        StringAssert.Contains("Democ",program.GetMyName("Democ"));
     }
-    public class MockObject : ILogger<WeatherForecastController>
+
+    [Test]
+    public void Test5()
     {
-        public IDisposable BeginScope<TState>(TState state)
-        {
-            return new Dispossible();
-            //throw new NotImplementedException();
-        }
-
-        public bool IsEnabled(LogLevel logLevel)
-        {
-            return false;
-            //throw new NotImplementedException();
-        }
-
-        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
-        {
-           // throw new NotImplementedException();
-        }
+        Program p=new Program();
+        var value=p.POSNEG();
+        Assert.AreEqual(value,-1);
     }
-    
-    // dotnet add package Microsoft.Extensions.Logging
+
+    [Test]
+    [Author("Green Tester")]
+    [Description("Testing the default value for PostData Method which is 1")]
+    public void Test6()
+    {
+        var value=controllerforecast.postdata();
+        Assert.That(value,IsEqual(0));
+    }
+
+    [Test]
+    public void Test6()
+    {
+        var mock=new Mock<IDisposable>();
+        var data=mock.Object;
+
+        Assert.That("disposed",Is.EqualTo(controllerforecast.DemoTest(data)));
+    }
 }
 
 
-/*
- class Dispossible : IDisposable
-    {
-        public void Dispose()
-        {
-            //throw new NotImplementedException();
-        }
-    }
-    public class MockObject : ILogger<WeatherForecastController>
-    {
-        public IDisposable BeginScope<TState>(TState state)
-        {
-            return new Dispossible();
-            //throw new NotImplementedException();
-        }
-
-        public bool IsEnabled(LogLevel logLevel)
-        {
-            return false;
-            //throw new NotImplementedException();
-        }
-
-        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
-        {
-           // throw new NotImplementedException();
-        }
-    }
-*/ 
