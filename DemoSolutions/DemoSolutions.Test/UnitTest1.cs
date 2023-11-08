@@ -41,6 +41,14 @@ public class Tests
     {
         StringAssert.Contains("Democ",program.GetMyName("Democ"));
     }
+
+    [Test]
+    public void Test5()
+    {
+        Program p=new Program();
+        var value=p.POSNEG();
+        Assert.AreEqual(value,-1);
+    }
 }
 
 

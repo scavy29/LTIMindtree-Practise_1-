@@ -30,7 +30,7 @@ namespace DemoSolutions{
 
     public int POSNEG()
     {
-        
+        return -1;
     }
     }
 }
