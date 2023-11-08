@@ -11,6 +11,7 @@
 </ItemGroup>
 
 <Target Name="Build">
+<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')"/>
 <Csc Sources="@(Compile)"></Csc>
 </Target>
 
