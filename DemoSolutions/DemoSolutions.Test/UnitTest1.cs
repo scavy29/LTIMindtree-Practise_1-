@@ -10,6 +10,8 @@ public class Tests
     [Test]
     public void Test1()
     {
+        Program prog=new Program();
+        var val=prog.Demo();
         Assert.Pass();
     }
 }
