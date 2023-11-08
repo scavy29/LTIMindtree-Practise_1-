@@ -3,6 +3,7 @@
 namespace DemoSolutions{
     public class Program
     {
+        
         public static void Main(string [] args)
         {
             Console.WriteLine("Hello!!! World");
@@ -12,6 +13,14 @@ namespace DemoSolutions{
     {
         return 100;
     }
-    
+
+    public static bool IsOK()
+    {
+        return true;
+    }
+    public void ThrowDivideByZeroExceptionMethod()
+    {
+        throw new System.DivideByZeroException("Divide by zero");
+    }
     }
 }
