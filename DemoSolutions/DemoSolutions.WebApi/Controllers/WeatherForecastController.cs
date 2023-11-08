@@ -35,4 +35,21 @@ public class WeatherForecastController : ControllerBase
     {
         return 0;
     }
+
+    public class MockObject:ILogger<WeatherForecastController>
+    {
+        public IDisposable BeginScope<TState>(TState state)
+        {
+            return new Dispossible();
+            //throw new NotImplementedException();
+        }
+        public bool IsEnabled(LogLevel loglevel)
+        {
+            return false;
+        }
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
+        {
+           // throw new NotImplementedException();
+        }
+    }
 }
