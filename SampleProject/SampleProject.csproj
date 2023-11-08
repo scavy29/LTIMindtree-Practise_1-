@@ -2,25 +2,27 @@
 
 <PropertyGroup>
 <TargetFramework>net6.0</TargetFramework>
+<AssemblyName>DemoProjectsApp</AssemblyName>
 <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-<OutputPath>bin\</OutputPath>
 <OutputType>Exe</OutputType>
-<AssemblyName>WordlyHello</AssemblyName>
+<OutputPath>bin\</OutputPath>
 </PropertyGroup>
+
+<!-- Property group represent property -->
 
 <ItemGroup>
 <Compile Include="Program.cs"></Compile>
 </ItemGroup>
 
+
+
 <Target Name="Build">
-<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')"/></MakeDir>
-<Csc Sources="@(Compile)" OutputAssembly="$(AssemblyName).exe"></Csc>
+<MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" ></MakeDir>
+<Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe"></Csc>
 </Target>
-
 <Target Name="Clean">
-<Delete Files="Program.cs"/>
-
-<Target Name="Rebuild" DependsonTarget="Build;Clean">
+<Delete Files="$(OutputPath)$(AssemblyName).exe"/>
 </Target>
+<Target Name="Rebuild" DependsOnTargets="Clean:Build"/>
 
 </Project>
