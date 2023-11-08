@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DemoSolutions.App\DemoSolutions.App.csproj" />
+    <ProjectReference Include="DemoSolutions.Test.csproj" />
   </ItemGroup>
 
 </Project>

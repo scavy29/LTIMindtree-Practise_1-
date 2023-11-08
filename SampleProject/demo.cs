@@ -9,7 +9,7 @@ namespace SampleProject
     {
         public static void Main(string [] args)
         {
-            Console.WriteLine("Hello BC");
+            Console.WriteLine("Hello ");
         }
     }
 }

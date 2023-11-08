@@ -29,4 +29,10 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
     }
+
+    [HttpPost]
+    public int postdata()
+    {
+        return 0;
+    }
 }

@@ -1,13 +1,16 @@
 using DemoSolutions;
+namespace DemoSolutions.WebApi.Controllers;
 namespace DemoSolutions.Test;
 
 public class Tests
 {
     Program program=null;
-    // var value=program.Demo();
+    WeatherForecastController controllerforecast=null;
     [SetUp]
     public void Setup()
     {
+        program=new Program();
+        WeatherForecastController = new WeatherForecastController();
     }
 
     [Test]
@@ -49,6 +52,7 @@ public class Tests
         var value=p.POSNEG();
         Assert.AreEqual(value,-1);
     }
+
 }
 
 
