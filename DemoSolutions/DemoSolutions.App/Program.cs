@@ -22,5 +22,15 @@ namespace DemoSolutions{
     {
         throw new System.DivideByZeroException("Divide by zero");
     }
+
+    public string GetMyName(string name)
+    {
+        return name;
+    }
+
+    public int POSNEG()
+    {
+        
+    }
     }
 }
