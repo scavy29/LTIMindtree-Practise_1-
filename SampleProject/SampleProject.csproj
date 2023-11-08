@@ -1,0 +1,15 @@
+<Project>
+
+<PropertyGroup>
+<TargetFramework>net 6.0</TargetFramework>
+</PropertyGroup>
+
+<ItemGroup>
+<Compile Include="Program.cs"></Compile>
+</ItemGroup>
+
+<Target Name="Build">
+<Csc Sources="@(Compile)"></Csc>
+</Target>
+
+</Project>
