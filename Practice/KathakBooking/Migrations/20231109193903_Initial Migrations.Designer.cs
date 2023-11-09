@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KathakBooking.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231109174000_Initial migration")]
-    partial class Initialmigration
+    [Migration("20231109193903_Initial Migrations")]
+    partial class InitialMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

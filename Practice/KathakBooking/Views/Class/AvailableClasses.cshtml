@@ -22,7 +22,10 @@
             <td>@i.Capacity</td>
             <td></td>
             <td></td>
-            <td><a asp-controller="Booking" asp-action="ClassEnrollmentForm" asp-route-id="@i.ClassId">Enroll</a></td>
-        </tr>
+            if(@i.Capacity==0)
+            {<td><p>Enrollment Over</p></td>}
+            else
+            {<td><p>Available</p></td>}
+            </tr>
     }
 </table>
