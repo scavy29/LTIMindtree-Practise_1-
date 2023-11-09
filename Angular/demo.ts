@@ -43,3 +43,12 @@ function Demo(x:number,y:number=10)
 }
 
 console.log(Demo(4));
+
+
+function Demo1(x:string,y:number,z:number)
+{
+    return x+y+z;
+}
+
+console.log(Demo1("Age: ",1,2));
+
