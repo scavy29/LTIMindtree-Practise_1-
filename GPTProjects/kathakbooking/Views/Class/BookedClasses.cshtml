@@ -1,0 +1,32 @@
+@model List<Class>
+
+<h2>Booked Classes</h2>
+
+@if (Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Class ID</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Total Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var danceClass in Model)
+            {
+                <tr>
+                    <td>@danceClass.ClassID</td>
+                    <td>@danceClass.StartTime</td>
+                    <td>@danceClass.EndTime</td>
+                    <td>@danceClass.Capacity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No booked classes at the moment.</p>
+}
