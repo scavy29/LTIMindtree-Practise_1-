@@ -11,11 +11,26 @@ namespace KathakBooking.Controllers
     [Route("[controller]")]
     public class BookingController : Controller
     {
-        private readonly ILogger<BookingController> _logger;
-
-        public BookingController(ILogger<BookingController> logger)
+        private ApplicationDbContext db;
+        public BookingController(ApplicationDbContext context)
         {
-            _logger = logger;
+            this.db=context;
+        }
+
+        public IActionResult ClassEnrollmentForm(int id)
+        {
+            
+        }
+
+        [HttpPost]
+        public IActionResult ClassEnrollmentForm(int id,string name,string email)
+        {
+
+        }
+
+        public IActionResult EnrollmentConfirmation(int studentid)
+        {
+            
         }
 
         public IActionResult Index()
