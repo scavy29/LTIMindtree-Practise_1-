@@ -18,29 +18,31 @@ namespace KathakBooking.Controllers
             this.db=context;
         }
 
-        public IActionResult ClassEnrollmentForm(int id)
+        public IActionResult Index()
         {
-            return View();   
+            return View();
         }
 
-        [HttpPost]
-        public IActionResult ClassEnrollmentForm(int id,string name,string email)
+        public IActionResult ClassEnrollmentForm(int id)
         {
-            Student s=new Student();
-            db.Students.Add(s);
-            db.SaveChanges();
-            return RedirectToAction("EnrollmentConfirmation");
+            return View("");   
         }
+
+        // [HttpPost]
+        // public IActionResult ClassEnrollmentForm(int id,string name,string email)
+        // {
+        //     Student s=new Student();
+        //     db.Students.Add(s);
+        //     db.SaveChanges();
+        //     return RedirectToAction("EnrollmentConfirmation");
+        // }
 
         // public IActionResult EnrollmentConfirmation(int studentid)
         // {
 
         // }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
