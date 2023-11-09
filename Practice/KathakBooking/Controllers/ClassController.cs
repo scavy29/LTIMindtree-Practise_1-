@@ -28,11 +28,17 @@ namespace KathakBooking.Controllers
             return View(list);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public IActionResult Create(Class c)
         {
-            db.Classes.Add(c);
-            db.SaveChanges();
-            return View();
+                db.Classes.Add(c);
+                db.SaveChanges();
+                return RedirectToAction("AvailableClasses");
         }
 
         public IActionResult BookedClasses()
