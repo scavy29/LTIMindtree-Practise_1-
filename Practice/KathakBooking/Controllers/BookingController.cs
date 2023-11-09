@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using KathakBooking.Models;
 
 namespace KathakBooking.Controllers
 {
@@ -17,21 +18,21 @@ namespace KathakBooking.Controllers
             this.db=context;
         }
 
-        public IActionResult ClassEnrollmentForm(int id)
-        {
+        // public IActionResult ClassEnrollmentForm(int id)
+        // {
             
-        }
+        // }
 
-        [HttpPost]
-        public IActionResult ClassEnrollmentForm(int id,string name,string email)
-        {
+        // [HttpPost]
+        // public IActionResult ClassEnrollmentForm(int id,string name,string email)
+        // {
 
-        }
+        // }
 
-        public IActionResult EnrollmentConfirmation(int studentid)
-        {
-            
-        }
+        // public IActionResult EnrollmentConfirmation(int studentid)
+        // {
+
+        // }
 
         public IActionResult Index()
         {

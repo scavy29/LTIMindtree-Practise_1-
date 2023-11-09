@@ -24,11 +24,20 @@ namespace KathakBooking.Controllers
 
         public IActionResult AvailableClasses()
         {
-
+            var list=db.Classes;
+            return View(list);
         }
+
+        public IActionResult Create(Class c)
+        {
+            db.Classes.Add(c);
+            db.SaveChanges();
+            return View();
+        }
+
         public IActionResult BookedClasses()
         {
-
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

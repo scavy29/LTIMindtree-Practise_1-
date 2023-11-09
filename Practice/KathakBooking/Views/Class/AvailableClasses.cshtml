@@ -1,0 +1,24 @@
+@model IEnumerable<KathakBooking.Models.Class>
+
+<center><h1>Available Kathak Dance Classes</h1></center>
+<table class="table table-stripped">
+    <tr>
+        <th>@Html.DisplayNameFor(m=>m.ClassId)</th>
+        <th>@Html.DisplayNameFor(m=>m.StartTime)</th>
+        <th>@Html.DisplayNameFor(m=>m.EndTime)</th>
+        <th>Total Capacity</th>
+        <th>Students Count</th>
+        <th>Remaning Capacity</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.ClassId</td>
+            <td>@i.StartTime</td>
+            <td>@i.EndTime</td>
+            <td>@i.Capacity</td>
+        </tr>
+    }
+</table>
