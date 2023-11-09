@@ -1,3 +1,4 @@
+/*
 let nme:string="demo";
 
 let num:number=24.56;
@@ -52,3 +53,45 @@ function Demo1(x:string,y:number,z:number)
 
 console.log(Demo1("Age: ",1,2));
 
+*/
+
+function AcceptManyParams(...names:any[])
+{
+    for(let x of names)
+    {
+        console.log(x);
+    }
+
+    for(let index in names)
+    {
+        console.log("At index: "+index+" the value is "+names[index]);
+    }
+}
+
+AcceptManyParams("anony",21,12,23,44,true);
+
+//While Loop
+function WhileDemo()
+{
+    let i=0;
+    while(i<=10)
+    {
+        console.log(i+" ");
+        i=i+5;
+    }
+}
+
+WhileDemo();
+
+//DoWhile loops
+function DoWhileLoop()
+{
+    let i=0;
+    do
+    {
+        console.log(i);
+        i++;
+    }while(i<5);
+}
+
+DoWhileLoop();
