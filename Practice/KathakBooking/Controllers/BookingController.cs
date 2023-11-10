@@ -56,9 +56,9 @@ namespace KathakBooking.Controllers
             return RedirectToAction("EnrollmentConfirmation",new{id=id});
         }
 
-        public IActionResult EnrollmentConfirmation(int studentid)
+        public IActionResult EnrollmentConfirmation(int id=1)
         {
-            var studi=db.Classes.Find(studentid);
+            var studi=db.Classes.Where(c =>c.ClassId==id).FirstOrDefault();
             return View(studi);
         }
 

@@ -1,4 +1,4 @@
-@model IEnumerable<KathakBooking.Models.Class>
+@model KathakBooking.Models.Class
 
 <center>
 <h1>Enrollment Confirmation</h1>
@@ -10,14 +10,12 @@
         <th>@Html.DisplayNameFor(m=>m.EndTime)</th>
     </tr>
 
-    @foreach(var i in Model)
-    {
         <tr>
-            <td>@i.ClassId</td>
-            <td>@i.StartTime</td>
-            <td>@i.EndTime</td>
+            <td>@Model.ClassId</td>
+            <td>@Model.StartTime</td>
+            <td>@Model.EndTime</td>
         </tr>
-    }
+    
 </table>
     <a asp-action="AvailableClasses" asp-controller="Class">Back to Available Classes</a>
 </center>
