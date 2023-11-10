@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using KathakBooking.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KathakBooking.Controllers
 {
@@ -40,15 +40,14 @@ namespace KathakBooking.Controllers
         [HttpGet]
         public IActionResult ClassEnrollmentForm(int id)
         {
-            Student.ClassId=id;
+            
             return View();
         }
 
         [HttpPost]
         public IActionResult ClassEnrollmentForm(int id,string name,string email)
         {
-
-            return RedirectToAction("ClassEnrollmentForm");
+            return RedirectToAction("EnrollmentConfirmation");
         }
 
         public IActionResult EnrollmentConfirmation(int studentid,Student s)
