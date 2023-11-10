@@ -12,6 +12,6 @@ namespace GRT.Models
         public int OrganizerId{get;set;}
         public DateTime EventDate{get;set;}
         public TimeOnly TimeSlot{get;set;}
-        public EventSpace EventSpace{get;set;}
+        public EventSpace? EventSpace{get;set;}
     }
 }
