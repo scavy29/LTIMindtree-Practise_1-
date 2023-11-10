@@ -1,0 +1,14 @@
+@model GRT.Models.EventSpace
+
+<form method="POST" asp-action="Create" asp-controller="Event">
+    <label asp-for="EventName"></label>
+    <input asp-for="EventName">
+
+    <label asp-for="Capacity"></label>
+    <input asp-for="Capacity">
+
+    <label asp-for="Availability"></label>
+    <input asp-for="Availability">
+
+    <input type="submit" value="Create">
+</form>

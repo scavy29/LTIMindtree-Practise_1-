@@ -15,7 +15,7 @@
             <td>@i.EventName</td>
             <td>@i.Capacity</td>
             <td>22/02/2022</td>
-            <a 
+            <td><input type="submit" value="Book" class="btn btn-info" asp-route-id="@i.SpaceId" asp-action="BookingConfirmation"></td>
         </tr>
     }
 </table>

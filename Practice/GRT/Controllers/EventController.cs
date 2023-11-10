@@ -28,6 +28,20 @@ namespace GRT.Controllers
             return View(list);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(EventSpace es)
+        {
+            db.EventSpaces.Add(es);
+            db.SaveChanges();
+            return View();
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
