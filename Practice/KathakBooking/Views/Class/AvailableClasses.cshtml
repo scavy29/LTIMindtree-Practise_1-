@@ -23,7 +23,7 @@
             <td></td>
             <td></td>
             @if(@i.Capacity>0)
-            {<td><input type="submit" value="E" asp-action="ClassEnrollmentForm" controller="Booking" asp-route-id="@i.ClassId"></td>}
+            {<td><a input type="submit" asp-controller="Booking" asp-router-id="@i.ClassId" asp-action="ClassEnrollmentForm">Enroll</a></td>}
             else
             {<td><p>Enrollment Over</p></td>}
             </tr>

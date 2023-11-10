@@ -9,7 +9,6 @@ using KathakBooking.Models;
 
 namespace KathakBooking.Controllers
 {
-    // [Route("[controller]")]
     public class BookingController : Controller
     {
         private ApplicationDbContext db;
@@ -41,8 +40,20 @@ namespace KathakBooking.Controllers
         [HttpGet]
         public IActionResult ClassEnrollmentForm(int id)
         {
-            var list=db.Students;   
-            return View(list);
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ClassEnrollmentForm(int id,string name,string email)
+        {
+
+            return RedirectToAction("ClassEnrollmentForm");
+        }
+
+        public IActionResult EnrollmentConfirmation(int studentid)
+        {
+            var list=db.Students.Find(studentid);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
