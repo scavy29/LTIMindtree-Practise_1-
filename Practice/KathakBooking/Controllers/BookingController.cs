@@ -39,6 +39,11 @@ namespace KathakBooking.Controllers
 
         public IActionResult ClassEnrollmentForm(int id)
         {
+            Student s=new Student
+            {
+                s.ClassId=id
+            };
+            
             return View();
         }
 
@@ -48,7 +53,7 @@ namespace KathakBooking.Controllers
             return RedirectToAction("EnrollmentConfirmation");
         }
 
-        public IActionResult EnrollmentConfirmation(int studentid,Student s)
+        public IActionResult EnrollmentConfirmation(int studentid)
         {
             return View();
         }
