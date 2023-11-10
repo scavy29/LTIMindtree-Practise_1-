@@ -40,7 +40,7 @@ namespace KathakBooking.Controllers
         [HttpGet]
         public IActionResult ClassEnrollmentForm(int id)
         {
-            
+            Student.ClassId=id;
             return View();
         }
 

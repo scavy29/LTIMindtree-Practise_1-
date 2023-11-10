@@ -1,0 +1,13 @@
+@model IEnumerable<KathakBooking.Models.Class>
+
+<table class="table table-stripped">
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.ClassId</td>
+            <td>@i.StartTime</td>
+            <td>@i.EndTime</td>
+        </tr>
+    }
+</table>
+
