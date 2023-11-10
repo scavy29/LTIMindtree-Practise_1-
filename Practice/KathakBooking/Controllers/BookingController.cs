@@ -46,13 +46,12 @@ namespace KathakBooking.Controllers
         [HttpPost]
         public IActionResult ClassEnrollmentForm(int id,string name,string email)
         {
-
             return RedirectToAction("ClassEnrollmentForm");
         }
 
-        public IActionResult EnrollmentConfirmation(int studentid)
+        public IActionResult EnrollmentConfirmation(int studentid,Student s)
         {
-            var list=db.Students.Find(studentid);
+            db.Students.Add(s);
             return View();
         }
 
