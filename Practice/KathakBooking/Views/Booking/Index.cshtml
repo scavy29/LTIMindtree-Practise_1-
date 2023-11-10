@@ -1,0 +1,18 @@
+@model IEnumerable<KathakBooking.Models.Student>
+
+<a asp-action="Create" asp-controller="Booking">Create</a>
+<table class="table table-stripped">
+    <tr>
+        <th>@Html.DisplayNameFor(m=>m.Name)</th>
+        <th>@Html.DisplayNameFor(m=>m.Email)</th>
+        <th>Class ID</th>
+    </tr>
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.Name</td>
+            <td>@i.Email</td>
+            <td>@i.ClassId</td>
+        </tr>
+    }
+</table>

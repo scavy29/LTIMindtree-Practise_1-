@@ -1,0 +1,14 @@
+@model KathakBooking.Models.Student
+
+<form method="POST" asp-controller="Booking" asp-action="Create">
+    <label asp-for="Name"></label>
+    <input asp-for="Name">
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email">
+
+    <label asp-for="ClassId"></label>
+    <input asp-for="ClassId">
+    
+    <input type="submit" value="Create" asp-action="Create">
+</form>
