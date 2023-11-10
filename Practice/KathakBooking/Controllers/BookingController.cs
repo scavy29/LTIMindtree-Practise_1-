@@ -45,20 +45,12 @@ namespace KathakBooking.Controllers
         [HttpPost]
         public IActionResult ClassEnrollmentForm(int id,string name,string email)
         {
-            Student=new Student
-            {
-                s.ClassId=id,
-                s.Name=name,
-                s.Email=email
-            };
-
-            return RedirectToAction("EnrollmentConfirmation",new{id});
+            return View();
         }
 
         public IActionResult EnrollmentConfirmation(int studentid)
         {
-            var list=db.Students.Find(studentid);
-            return View(list);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

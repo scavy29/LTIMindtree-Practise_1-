@@ -9,7 +9,15 @@
         <th>@Html.DisplayNameFor(m=>m.StartTime)</th>
         <th>@Html.DisplayNameFor(m=>m.EndTime)</th>
     </tr>
-    
+
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.ClassId</td>
+            <td>@i.StartTime</td>
+            <td>@i.EndTime</td>
+        </tr>
+    }
 </table>
     <a asp-action="AvailableClasses" asp-controller="Class">Back to Available Classes</a>
 </center>
