@@ -1,8 +1,16 @@
-@model KathakBooking.Models.Student
+@model IEnumerable<KathakBooking.Models.Class>
 
 <table class="table table-stripped">
     <tr>
         <th>Class Id</th>
-        <th></th>
+        <th>@Html.DisplayNameFor(m=>m.StartTime)</th>
+        <th>@Html.DisplayNameFor(m=>m.EndTime)</th>
     </tr>
+
+    @foreach(var i in Model)
+    {
+        <td>@i.ClassId</td>
+        <td>@i.StartTime</td>
+        <td>@i.EndTime</td>
+    }
 </table>
