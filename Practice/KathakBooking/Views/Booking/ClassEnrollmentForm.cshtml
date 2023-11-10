@@ -1,8 +1,11 @@
 @model KathakBooking.Models.Student
 
 <center>
-<form method="POST" asp-controller="Booking" asp-action="ClassEnrollmentForm">
+<form method="POST" asp-controller="Booking" asp-action="EnrollmentConfirmation">
     <h1>Enroll in Kathak Class</h1>
+    <div class="form-group">
+        <input asp-for="StudentId" readonly>
+    </div>
     <label asp-for="Name"></label>
     <input asp-for="Name">
     <br/><br/>
