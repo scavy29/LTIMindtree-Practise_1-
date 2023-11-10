@@ -37,10 +37,8 @@ namespace KathakBooking.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
         public IActionResult ClassEnrollmentForm(int id)
         {
-            
             return View();
         }
 

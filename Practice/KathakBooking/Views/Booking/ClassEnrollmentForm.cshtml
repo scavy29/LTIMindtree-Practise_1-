@@ -4,12 +4,15 @@
 <form method="POST" asp-controller="Booking" asp-action="EnrollmentConfirmation">
     
     <h1>Enroll in Kathak Class</h1>
+
     <label asp-for="Name"></label>
     <input asp-for="Name">
     <br/><br/>
+
     <label asp-for="Email"></label>
     <input asp-for="Email">
     <br/><br/>
-    <a asp-action="EnrollmentConfirmation" asp-controller="Booking" class="btn btn-info" asp-route-id="StudentId">Enroll</a>
+    
+    <a asp-action="EnrollmentConfirmation" asp-controller="Booking" class="btn btn-info" asp-route-id="ClassId">Enroll</a>
 </form>
 </center>

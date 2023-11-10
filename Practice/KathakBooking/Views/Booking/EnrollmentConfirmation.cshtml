@@ -1,13 +1,16 @@
 @model IEnumerable<KathakBooking.Models.Class>
 
+<center>
+<h1>Enrollment Confirmation</h1>
+<p>You have sucessfully enrolled in Kathak Dance Class</p>
 <table class="table table-stripped">
-    @foreach(var i in Model)
-    {
-        <tr>
-            <td>@i.ClassId</td>
-            <td>@i.StartTime</td>
-            <td>@i.EndTime</td>
-        </tr>
-    }
+    <tr>
+        <th>Class Id</th>
+        <th>@Html.DisplayNameFor(m=>m.StartTime)</th>
+        <th>@Html.DisplayNameFor(m=>m.EndTime)</th>
+    </tr>
+    
 </table>
+    <a asp-action="AvailableClasses" asp-controller="Class">Back to Available Classes</a>
+</center>
 
