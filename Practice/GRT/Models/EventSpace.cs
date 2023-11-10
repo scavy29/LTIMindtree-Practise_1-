@@ -10,6 +10,7 @@ namespace GRT.Models
     {
         [Key]
         public int SpaceId{get;set;}
+        public string EventName{get;set;}
         public int Capacity{get;set;}
         public string Availability{get;set;}
         public ICollection<Booking>? Bookings{get;set;}

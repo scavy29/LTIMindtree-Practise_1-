@@ -1,0 +1,21 @@
+@model IEnumerable<GRT.Models.EventSpace>
+
+
+<table class="table table-stripped">
+    <tr>
+        <th>Event Space</th>
+        <th>@Html.DisplayNameFor(m=>m.Capacity)</th>
+        <th>Booked Dates</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.EventName</td>
+            <td>@i.Capacity</td>
+            <td>22/02/2022</td>
+            <a 
+        </tr>
+    }
+</table>
