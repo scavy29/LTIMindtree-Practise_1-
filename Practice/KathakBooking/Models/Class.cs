@@ -11,7 +11,6 @@ namespace KathakBooking.Models
         public int ClassId{get;set;}
         public DateTime StartTime{get;set;}
         public DateTime EndTime{get;set;}
-        [Range(0,10,ErrorMessage="Capacity is 10")]
         public int Capacity{get;set;}
         public ICollection<Student>Students{get;set;}
     }
